@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneClick Tools v1.1</title>
+  <meta name="description" content="OneClick Tools v1.1 - All-in-one online toolkit for images, videos, PDFs, and more. Fully responsive with mobile UI.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-slate-100 text-slate-900">
+  <header class="flex items-center justify-between bg-blue-600 text-white p-4 shadow">
+    <h1 class="text-xl font-bold">OneClick Tools <span class="text-sm font-normal">v1.1</span></h1>
+    <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
+  </header>
+  <div class="flex">
+    <!-- Sidebar / Drawer -->
+    <aside id="sidebar" class="w-64 bg-white shadow-lg h-screen fixed lg:relative top-0 left-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-50">
+      <nav class="p-4 space-y-2">
+        <a href="#imageTools" class="block p-2 rounded hover:bg-blue-100">🖼 Image Tools</a>
+        <a href="#videoTools" class="block p-2 rounded hover:bg-blue-100">🎥 Video Tools</a>
+        <a href="#pdfTools" class="block p-2 rounded hover:bg-blue-100">📄 PDF Tools</a>
+        <a href="#otherTools" class="block p-2 rounded hover:bg-blue-100">⚙ Other Tools</a>
+        <a href="#about" class="block p-2 rounded hover:bg-blue-100">ℹ About</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 lg:ml-64">
+      <section id="about" class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">About OneClick Tools</h2>
+        <p class="text-slate-700">Welcome to OneClick Tools v1.1 – your all-in-one online toolkit. This version introduces:
+        <ul class="list-disc ml-6 mt-2">
+          <li>🚀 Mobile drawer UI for better phone experience</li>
+          <li>🐛 Bug fixes across image/video/pdf tools</li>
+          <li>🎨 Cleaner, modern Tailwind UI</li>
+          <li>📄 Stable PDF tools integration</li>
+          <li>✨ Rebranded as OneClick Tools</li>
+        </ul>
+        </p>
+      </section>
+      <section id="imageTools" class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">🖼 Image Tools</h2>
+        <p class="text-slate-600">Resize, Compress, Convert, Crop your images.</p>
+      </section>
+      <section id="videoTools" class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">🎥 Video Tools</h2>
+        <p class="text-slate-600">Compress videos, convert to GIF, trim clips.</p>
+      </section>
+      <section id="pdfTools" class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">📄 PDF Tools</h2>
+        <p class="text-slate-600">Split, Merge, Compress, Convert between PDF and Images.</p>
+      </section>
+      <section id="otherTools" class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">⚙ Other Tools</h2>
+        <p class="text-slate-600">QR Code Generator, Text Tools, Password Generator, and more.</p>
+      </section>
+    </main>
+  </div>
+  <footer class="bg-blue-600 text-white p-4 text-center">
+    <p>© 2025 OneClick Tools v1.1. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+  </script>
+</body>
+</html>
